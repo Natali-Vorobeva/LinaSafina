@@ -1,0 +1,38 @@
+@import url("../styles/nullstyle.css");
+@import url(https://fonts.googleapis.com/css?family=Oswald:200,300,regular,500,600,700);
+.page {
+  background: #0a0a0a;
+  color: #fff;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.header {
+  min-height: 180px;
+  width: 200px;
+  margin: 0 auto;
+  text-align: center;
+}
+.header__logo {
+  width: 160px;
+}
+.header__name {
+  text-transform: uppercase;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.main {
+  padding: 30px 0 0 0;
+}
+
+.links {
+  text-align: center;
+}
+
+.link {
+  text-transform: uppercase;
+}
+.link:not(:last-child) {
+  margin: 0 50px 0 0;
+}
