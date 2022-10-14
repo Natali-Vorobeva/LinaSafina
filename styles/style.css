@@ -49,7 +49,10 @@
   margin: 0 auto;
   text-align: center;
 }
-.header__logo {
+.header__logo_active {
+  pointer-events: none;
+}
+.header__image {
   max-width: 160px;
 }
 .header__name {
