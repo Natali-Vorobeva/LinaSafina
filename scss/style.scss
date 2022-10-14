@@ -1,7 +1,54 @@
 @import url('../styles/nullstyle.css');
 @import url(https://fonts.googleapis.com/css?family=Oswald:200,300,regular,500,600,700);
 
+@font-face {
+  font-family: 'Oswald';
+  src: local('Oswald'), url('../fonts/Oswald-Regular.woff2') format('woff2'),
+  url('../fonts/Oswald-Regular.woff') format('woff');
+  font-style:  normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'Oswald';
+  src: local('Oswald'), url('../fonts/Oswald-SemiBold.woff2') format('woff2'),
+  url('../fonts/Oswald-SemiBold.woff') format('woff');
+  font-style:  normal;
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Oswald';
+  src: local('Oswald'), url('../fonts/Oswald-Bold.woff2') format('woff2'),
+  url('../fonts/Oswald-Bold.woff') format('woff');
+  font-style:  normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Oswald';
+  src: local('Oswald'), url('../fonts/Oswald-Medium.woff2') format('woff2'),
+  url('../fonts/Oswald-Medium.woff') format('woff');
+  font-style:  normal;
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Oswald';
+  src: local('Oswald'), url('../fonts/Oswald-Light.woff2') format('woff2'),
+  url('../fonts/Oswald-Light.woff') format('woff');
+  font-style:  normal;
+  font-weight: 300;
+  font-display: swap;
+}
+
+
 .page {
+	font-family: 'Oswald', serif;
 	background: #0a0a0a;
 	color: #fff;
 	margin: 0 auto;
@@ -11,11 +58,11 @@
 
 .header {
 	min-height: 180px;
-	width: 200px;
+	max-width: 200px;
 	margin: 0 auto;
 	text-align: center;
 	&__logo {
-		width: 160px;
+		max-width: 160px;
 	}
 
 	&__name {
