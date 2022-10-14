@@ -29,12 +29,30 @@
 }
 .links {
 	text-align: center;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	@media (max-width:573px){
+				flex-direction: column;
+	}
 }
 
 .link {
 	text-transform: uppercase;
 	&:not(:last-child){
 		margin: 0 50px 0 0;
+		@media (max-width: 687px){
+			margin: 0 30px 0 0;
+		}
+		@media (max-width: 610px){
+			margin: 0 20px 0 0;
+		}
+		@media (max-width: 610px){
+			margin: 0 20px 0 0;
+		}
+		@media (max-width: 610px){
+			margin: 0 0 20px 0;
+		}
 	}
 }
 .slider {
