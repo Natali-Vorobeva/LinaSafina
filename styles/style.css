@@ -93,12 +93,7 @@
     margin: 0 20px 0 0;
   }
 }
-@media (max-width: 610px) {
-  .link:not(:last-child) {
-    margin: 0 20px 0 0;
-  }
-}
-@media (max-width: 610px) {
+@media (max-width: 573px) {
   .link:not(:last-child) {
     margin: 0 0 20px 0;
   }
