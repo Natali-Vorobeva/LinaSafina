@@ -40,12 +40,16 @@
   background: #0a0a0a;
   color: #fff;
   margin: 0 auto;
-  width: 80%;
+  max-width: 1180px;
+  height: 100%;
+}
+.page__wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .header {
-  min-height: 180px;
-  max-width: 200px;
   margin: 0 auto;
   text-align: center;
 }
@@ -53,48 +57,124 @@
   pointer-events: none;
 }
 .header__image {
-  max-width: 160px;
+  max-width: 70px;
 }
 .header__name {
+  max-width: 200px;
+  margin: 0 auto;
   text-transform: uppercase;
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
-
-.main {
-  padding: 30px 0 0 0;
-}
-
-.links {
+.header__links {
   text-align: center;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  margin: 20px 0 0 0;
 }
 @media (max-width: 573px) {
-  .links {
+  .header__links {
     flex-direction: column;
   }
 }
-
-.link {
+.header__link {
   text-transform: uppercase;
 }
-.link:not(:last-child) {
+.header__link:not(:last-child) {
   margin: 0 50px 0 0;
 }
 @media (max-width: 687px) {
-  .link:not(:last-child) {
+  .header__link:not(:last-child) {
     margin: 0 30px 0 0;
   }
 }
 @media (max-width: 610px) {
-  .link:not(:last-child) {
+  .header__link:not(:last-child) {
     margin: 0 20px 0 0;
   }
 }
 @media (max-width: 573px) {
-  .link:not(:last-child) {
+  .header__link:not(:last-child) {
     margin: 0 0 20px 0;
   }
+}
+
+.main {
+  flex: 1 1 auto;
+  max-height: calc(100vh - 190px - 30px);
+  padding: 20px 0 0 0;
+}
+@media (max-width: 992px) {
+  .main {
+    max-height: 450px;
+  }
+}
+@media (max-width: 768px) {
+  .main {
+    min-height: 400px;
+  }
+}
+.main__wrapper {
+  max-width: 60%;
+  margin: 0 auto;
+}
+@media (max-width: 768px) {
+  .main__wrapper {
+    max-width: 100%;
+  }
+}
+
+.image-slider {
+  padding: 10px 40px;
+  border: 1px solid #fff;
+  overflow: hidden;
+  max-width: 400px;
+  margin: 0 auto;
+}
+@media (max-width: 768px) {
+  .image-slider {
+    max-height: 300px;
+  }
+}
+.image-slider__slide {
+  overflow: hidden;
+  padding: 0 10px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+.image-slider__image {
+  text-align: center;
+  overflow: hidden;
+}
+.image-slider__img {
+  aspect-ratio: 1;
+  max-width: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.swiper-container {
+  border: 1px solid rgb(54, 53, 53);
+}
+
+.swiper-button-prev::after {
+  color: rgba(72, 68, 68, 0.5);
+  font-size: 60px;
+  font-weight: 700;
+}
+
+.swiper-button-next::after {
+  color: rgba(72, 68, 68, 0.5);
+  font-size: 60px;
+  font-weight: 700;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  height: 30px;
+}
+.footer__text {
+  align-self: end;
 }
