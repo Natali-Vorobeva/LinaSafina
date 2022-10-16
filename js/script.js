@@ -12,33 +12,34 @@ new Swiper('.image-slider', {
 	mousewheel: {
 		sensitivity: 1
 	},
-	// автовысота
+	
 	autoHeight: true,
 	slidesPerView: 1,
-	spaceBetween: 20,
+	spaceBetween: 30,
 	// slidePerGroup: 1,
 	centeredSlides: true,
 	autoplay: {
-		delay: 3000,
+		// delay: 3000,
 		// stopOnLastSlide: true,
 	},
-	// speed: 100,
-	effect: 'flip',
-	flipEffect: {
+	touchAngle: 90,
+	speed: 1000,
+	// effect: 'fade',
+	// fadeEffect: {
 		
-		crossFlip: true
-	},
+	// 	crossFade: true
+	// },
 	preloadImages: false,
 	lazy: {
 		loadOnTransitionStart: false,
 		loadPrevNext: false,
 	},
-	zoom: {
-		maxRatio: 3,
-		minRatio: 1,
-	},
+	// zoom: {
+	// 	maxRatio: 3,
+	// 	minRatio: 1,
+	// },
 	// direction: 'vertical',
-	// loop: true,
+	loop: true,
 	// loopedSlides: 3,
 	// breakpoints: {
 	// 	320: {
