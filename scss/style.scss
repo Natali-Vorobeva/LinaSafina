@@ -48,9 +48,16 @@
 
 
 .page {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 25% 1fr 10%;
+	grid-template-areas: 
+	'header'
+	'main'
+	'footer';
 	font-family: 'Oswald', serif;
 	background: #0a0a0a;
-	color: #fff;
+	color: rgb(255, 255, 255);
 	margin: 0 auto;
 	max-width: 1180px;
 	height: 100%;
@@ -65,8 +72,7 @@
 .header {	
 	margin: 0 auto;
 	text-align: center;
-	&__logo {
-		
+	&__logo {		
 	}
 
 	&__logo_active {
@@ -91,12 +97,14 @@
 	justify-content: center;
 	flex-wrap: wrap;
 	margin: 20px 0 0 0;
+	
 	@media (max-width:573px){
 				flex-direction: column;
 	}
 }
 &__link {
 	text-transform: uppercase;
+	transition: opacity 700ms ease;
 	&:not(:last-child){
 		margin: 0 50px 0 0;
 		@media (max-width: 687px){
@@ -109,10 +117,16 @@
 			margin: 0 0 20px 0;
 		}		
 	}
+	&:hover {
+		transition: opacity 700ms ease;
+		opacity: .7;
+	}
 }
 }
 
 .main {
+	grid-area: main;
+	position: relative;
 	flex: 1 1 auto;	
 	max-height: calc(100vh - 190px - 30px);	
 	padding: 20px 0 0 0;
@@ -123,6 +137,7 @@
 		min-height: 400px;	
 	}
 	&__wrapper {
+		position: relative;
 		max-width: 60%;		
 		margin: 0 auto;
 		@media (max-width:768px){
@@ -131,14 +146,13 @@
 	}
 }
 .image-slider {	
-	padding: 10px 40px;
-	border: 1px solid #fff;	
+	padding: 10px 0;
+	background: url('/image/cubiks.jpg');
 	overflow: hidden;
 	max-width: 400px;
 	margin: 0 auto;
 	@media (max-width:768px){
-		max-height: 300px;	
-			
+		padding: 10px 0;
 	}
 	
 	&__wrapper {		
@@ -155,6 +169,7 @@
 	&__image {
 		text-align: center;
 		overflow: hidden;
+		
 	}
 
 	&__img {		
@@ -164,8 +179,7 @@
 	}
 }
 .swiper-container {	
-	border: 1px solid rgb(54, 53, 53);
-	
+		
 }
 .swiper-wrapper {	
 	
@@ -173,21 +187,24 @@
 .swiper-slide {
 }
 .swiper-button-prev::after{
-	color: rgba(72, 68, 68, .5);
-	font-size: 60px;
+	color: rgba(72, 68, 68, 1);
+	font-size: 40px;
 	font-weight: 700;
 }
 .swiper-button-next::after{
-	color: rgba(72, 68, 68, .5);
-	font-size: 60px;
+	color: rgba(72, 68, 68, 1);
+	font-size: 40px;
 	font-weight: 700;
 }
 
+
+
 .footer {
+	grid-area: footer;
 	display: flex;
 	justify-content: center;
 	height: 30px;
-	
+
 	&__text {
 		align-self: end;
 	}
