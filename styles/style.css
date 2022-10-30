@@ -109,7 +109,6 @@
   display: none;
   background-color: rgba(0, 0, 0, 0);
   margin: 10px auto 0 auto;
-	border: none;
 }
 @media (max-width: 768px) {
   .burger {
@@ -117,6 +116,8 @@
     position: relative;
     width: 30px;
     height: 25px;
+    padding: 0;
+    border: none;
   }
 }
 @media (max-width: 768px) {
@@ -194,6 +195,7 @@
 .menu-burger__button {
   text-align: right;
   margin: 0 0 20px 0;
+  border: none;
 }
 .menu-burger__button-image {
   width: 20px;

@@ -136,6 +136,8 @@
 		position: relative;			
 		width: 30px;
 		height: 25px;
+		padding: 0;
+		border: none;
 	}
 
 	&__image {		
@@ -223,6 +225,7 @@
 	&__button {	
 		text-align: right;
 		margin: 0 0 20px 0;
+		border: none;
 	}
 
 	&__button-image {
