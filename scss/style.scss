@@ -1,5 +1,5 @@
 @import url('/../styles/nullstyle.css');
-// @import url(https://fonts.googleapis.com/css?family=Oswald:200,300,regular,500,600,700);
+
 
 @font-face {
   font-family: 'Oswald';
@@ -52,7 +52,8 @@
 	font-family: 'Oswald', 'Yanone+Kaffeesatz', sans-serif;	
 	max-width: 1180px;
 	margin: 0 auto;
-	border: 1px solid #fff;		
+	border-left: 1px solid #fff;		
+	border-right: 1px solid #fff;		
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
@@ -126,7 +127,54 @@
 	}
 }
 
+@keyframes star {   
+ 0% {	
+		// transform: translate(-30px, 3px); 
+		opacity: .5; 
+	} 
+	10% {
+		transform: scale(1); 
+		
+	}	
+	70% {
+		transform: scale(6); 
+	}
+  100% {
+    
+   }
+}
+
+@keyframes star2 {   
+	0% {
+		opacity: 0.5;
+	} 
+	2% {
+		opacity: 1;
+	}
+	30% {
+		transform: translate(-200px, -130px);
+	}	
+	31% {
+		transform: translate(100px, -10px);
+	}
+	60% {
+		transform: translate(-250px, -130px);
+		opacity: 1;
+	}
+	71% {
+		opacity: 0;
+	}
+	72% {		
+		transform: translate(-200px, 20px);
+		transform: scale(5);
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
 .burger {
+	position: relative;
 	display: none;	
 	background-color: rgba(0, 0, 0, 0);
 	margin: 10px auto 0 auto;
@@ -139,6 +187,27 @@
 		padding: 0;
 		border: none;
 	}
+
+	&__star {
+		position: absolute;
+		z-index: 3;
+		width: 1px;
+		height: 1px;
+		animation: star 3s ease-in infinite;
+		top: 6px;
+		right: 3px;
+		
+	}
+	&__star2 {
+		position: absolute;
+		z-index: 3;
+		width: 1px;
+		height: 1px;
+		animation: star2 8s ease-out infinite;
+		top: 60px;
+		right: -100px;		
+	}
+	
 
 	&__image {		
 		@media (max-width:768px){			
@@ -168,21 +237,154 @@
 				height: 3px;
 				left: 0;
 				top: 6px;
-			}		
+			}					
 		}
 	}
 	
 }
+
 
 .main {	
 	flex: 1;	
 	padding: 50px 0 0 0;	
 }
 
+.slide-image {
+	width: 100%;
+	object-fit: cover;
+}
+
+#slider {
+	margin: 0 auto 20px auto;
+	width: 800px;
+	max-width: 100%;
+	text-align: center;
+}
+
+#slider label {
+	cursor: pointer;
+	text-decoration: none;
+}
+
+#slides {	
+	border: 3px solid rgb(174, 114, 114);
+	background-color: rgb(106, 68, 68);
+	position: relative;
+	z-index: 1;
+}
+
+#overflow {
+	width: 100%;
+	overflow: hidden;
+}
+
+#slide1:checked ~ #slides .inner {
+	margin-left: 0;
+}
+#slide2:checked ~ #slides .inner {
+	margin-left: -100%;
+}
+#slide3:checked ~ #slides .inner {
+	margin-left: -200%;
+}
+#slide4:checked ~ #slides .inner {
+	margin-left: -300%;
+}
+
+#slides .inner {
+	transition: margin-left 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+	width: 400%;
+	line-height: 0;
+	max-height: 400px;
+}
+
+
+#slides .slide {
+	width: 25%;
+	float: left;
+	display: block;
+	height: 100%;
+	color: #fff;	
+}
+
+#slides .slide_1 {
+	
+}
+#slides .slide_2 {
+	
+}
+#slides .slide_3 {
+	
+}
+#slides .slide_4 {
+	
+}
+
+.slider {
+	&__input {
+		display: none;
+	}
+}
+
+#controls {
+	margin: -130px 0 0 0;
+	width: 100%;
+	height: 50px;
+	z-index: 3;
+	position: relative;
+}
+
+#controls label {
+	transition: opacity .2s ease-out;
+	display: none;
+	width: 50px;
+	height: 50px;
+	opacity: .4;
+}
+
+#slide2:checked ~ #controls label:nth-last-child(2),
+#slide3:checked ~ #controls label:nth-last-child(3),
+#slide4:checked ~ #controls label:nth-last-child(4),
+#slide1:checked ~ #controls label:nth-last-child(1) {
+	// background-image: url('') no-repeat;
+	float: right;
+	margin: 0 10px 0 0;
+	display: block;
+	cursor: pointer;
+}
+
+#bullets {
+	margin: 90px 0 0 0;
+}
+
+#bullets label {
+	display: inline-block;
+	width: 25px;
+	height: 3px;
+	border-radius:5px;
+	background-color: #ccc;
+	margin: 0 5px;
+}
+
+#slide1:checked ~ #bullets label:nth-child(1),
+#slide2:checked ~ #bullets label:nth-child(2),
+#slide3:checked ~ #bullets label:nth-child(3),
+#slide4:checked ~ #bullets label:nth-child(4) {
+	background-color: rgb(127, 150, 33);
+}
+
+.slide-content {
+	padding: 10px;
+	
+}
+
+
+
+
 .footer {	
 	display: flex;
 	justify-content: center;
-	height: 30px;
+	min-height: 30px;
 
 	&__text {
 		align-self: end;
@@ -201,6 +403,7 @@
 	top: 0;
 	left: 0;	
 	display: none;
+	z-index: 4;
 
 	&__container {		
 		min-height: 100%;
@@ -212,6 +415,7 @@
 
 	&__content {		
     max-width: 430px;
+		min-width: 200px;
     color: #000;
     background-color: #fff;
     box-shadow: 0px 0px 25px rgb(0, 0, 0, .6);
@@ -240,6 +444,7 @@
 		display: flex;
 		flex-direction: column;
 		transition: all .4s ease;
+		
 
 	&:not(:last-child){
 		padding: 0 0 20px 0;
