@@ -1,0 +1,24 @@
+.content {
+
+&__lead {
+	color: #000;
+	margin: 20px auto;
+	max-width: 500px;
+	aspect-ratio: 1.6;	
+	background-color: rgb(212, 201, 201);
+	background: url('/../image/about/fon.jpg') 80% 50%/ cover no-repeat;
+}
+
+&__title {
+	padding-top: 20px;
+	font-size: 24px;
+	text-align: center;
+}
+
+&__paragraph {
+	max-width: 200px;
+	margin: 0 auto;	
+	padding-top: 20px;
+}
+
+}

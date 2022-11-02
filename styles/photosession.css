@@ -1,0 +1,15 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+.form__label {
+  min-width: 100px;
+}
+.form__label:not(:last-child) {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
