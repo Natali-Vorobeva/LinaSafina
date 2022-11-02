@@ -1,10 +1,11 @@
+@import url("../styles/nullstyle.css");
 .content__lead {
   color: #000;
   margin: 20px auto;
   max-width: 500px;
   aspect-ratio: 1.6;
   background-color: rgb(212, 201, 201);
-  background: url("/../image/about/fon.jpg") 80% 50%/cover no-repeat;
+  background: url("../image/about/fon.jpg") 80% 50%/cover no-repeat;
 }
 .content__title {
   padding-top: 20px;
