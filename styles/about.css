@@ -4,8 +4,9 @@
   margin: 20px auto;
   max-width: 500px;
   aspect-ratio: 1.6;
+  overflow: hidden;
   background-color: rgb(212, 201, 201);
-  background: url("../image/about/glitch_2022-11-2_13-30-6.gif") 80% 50%/cover no-repeat;
+  background: url("../image/about/glitch_2022-11-2_13-30-6.gif") 100% 100%/cover no-repeat;
 }
 .content__title {
   padding-top: 30px;
